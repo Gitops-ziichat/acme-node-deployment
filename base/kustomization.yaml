@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+- http-route.yaml
+images:
+- name: acme-node
+  newName: ghcr.io/gitops-ziichat/acme-node
+  newTag: d487e04da659fdcc98d88b379fa829726fd0c91c

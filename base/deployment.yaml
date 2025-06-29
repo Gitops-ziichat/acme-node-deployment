@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: acme-node
+  name: acme-node
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: acme-node
+  template:
+    metadata:
+      labels:
+        app: acme-node
+    spec:
+      containers:
+        - name: app
+          image: acme-node
+          env:
+            - name: PORT
+              value: "8080"
+            - name: NODE_ENV
+              value: production
+            # - name: NODE_OPTIONS
+            #   value: --import @opentelemetry/auto-instrumentations-node/register --experimental-loader=@opentelemetry/instrumentation/hook.mjs
+            - name: OTEL_SERVICE_NAME
+              value: acme-node
+            - name: OTEL_NODE_RESOURCE_DETECTORS
+              value: env,host,os,process,serviceinstance,container
+          ports:
+            - name: web
+              containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100M
+            limits:
+              cpu: 200m
+              memory: 200M
