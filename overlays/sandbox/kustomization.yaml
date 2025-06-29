@@ -20,7 +20,7 @@ patches:
     patch: |-
       - op: add
         path: /spec/hostnames/-
-        value: "sandbox.dudo.dev"
+        value: "sandbox.ziichat.dev"
       - op: add
         path: /spec/hostnames/-
-        value: "*.dudo.dev"
+        value: "*.ziichat.dev"
