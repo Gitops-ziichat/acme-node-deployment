@@ -21,9 +21,9 @@ patches:
       - op: add
         path: /spec/hostnames/-
         value: "sandbox.ziichat.dev"
-      - op: add
-        path: /spec/hostnames/-
-        value: "*.ziichat.dev"
+      # - op: add
+      #   path: /spec/hostnames/-
+      #   value: "*.ziichat.dev"
       - op: add
         path: /metadata/annotations
         value: {}
