@@ -20,13 +20,13 @@ patches:
     patch: |-
       - op: add
         path: /spec/hostnames/-
-        value: "sandbox.ziichat.dev"
+        value: "sandbox.zacdn.net"
       # - op: add
       #   path: /spec/hostnames/-
-      #   value: "*.ziichat.dev"
+      #   value: "*.zacdn.net"
       - op: add
         path: /metadata/annotations
         value: {}
       - op: add
         path: /metadata/annotations/external-dns.alpha.kubernetes.io~1hostname
-        value: sandbox.ziichat.dev
+        value: sandbox.zacdn.net
