@@ -14,3 +14,16 @@ patches:
       - op: add
         path: /spec/selector/environment
         value: production
+  - target:
+      kind: HTTPRoute
+      name: acme-node-route
+    patch: |-
+      - op: add
+        path: /spec/hostnames/-
+        value: "api-acme-node.zacdn.net"
+      - op: add
+        path: /metadata/annotations
+        value: {}
+      - op: add
+        path: /metadata/annotations/external-dns.alpha.kubernetes.io~1hostname
+        value: api-acme-node.zacdn.net
