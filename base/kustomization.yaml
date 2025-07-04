@@ -7,4 +7,4 @@ resources:
 images:
 - name: acme-node
   newName: ghcr.io/gitops-ziichat/acme-node
-  newTag: aeb9d4047016208309971040855191fb1cde0826
+  newTag: f41edfc917c3670a4d3ce246efd6ae9cccb3d0eb
