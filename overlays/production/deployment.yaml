@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/gitops-ziichat/acme-node:latest
           env:
             - name: GREETING_SERVICE_URL
               value: greeting-service.greeting-service-production.svc.cluster.local:50051
