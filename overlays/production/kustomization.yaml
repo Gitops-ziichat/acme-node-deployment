@@ -20,10 +20,10 @@ patches:
     patch: |-
       - op: add
         path: /spec/hostnames/-
-        value: "api-acme-node.zacdn.net"
+        value: "api.zacdn.net"
       - op: add
         path: /metadata/annotations
         value: {}
       - op: add
         path: /metadata/annotations/external-dns.alpha.kubernetes.io~1hostname
-        value: api-acme-node.zacdn.net
+        value: api.zacdn.net
